@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>National complaint portal</title>
+</head>
+<body>
+
+    <header>
+         <h1>National Complaint Portal</h1>
+    </header>
+    <nav class="navbar">
+        <ul class="navlist">
+            <div class="logo"><img src="logo.jpg" alt="logo"></div>
+            <li><a href="#HOME">Home</a></li>
+            <li><a href="#Blog">blog</a></li>
+            <li><a href="#Services">services</a></li>
+            <li><a href="#About Us">about us</a></li>
+            <li><a href="http://127.0.0.1:5501/registration.html">sign in <img src="sign.jpg" alt="sign in"></a></li>
+            
+        </ul>
+        <div class="rightNav">
+            <input type="text" name="search" id="search">
+            <button class="btn-sm">search</button>
+        
+        </nav>
+
+        <div id="slideshow-container">  
+            <img class="mySlides" src="img.jpg" alt="Image 1" width="100%">
+            <img class="mySlides" src="img1.jpg" alt="Image 2" width="100%">
+            <img class="mySlides" src="img2.jpg" alt="Image 3" width="100%">
+            <!-- Add more images as needed -->
+    
+            <!-- Optional: Add navigation dots below the slideshow -->
+            <div style="text-align: center; margin-top: 10px;">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <!-- Add more dots if you have more images -->
+            </div>
+        </div>
+    
+        <script>
+            var slideIndex =0;
+            showSlides();
+    
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 3000); 
+            }
+        </script>
+
+        
+
+        
